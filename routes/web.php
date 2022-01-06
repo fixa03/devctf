@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    Route::get('/',[\App\Http\Controllers\Admin\IndexController::class,'index'])->name('admin.index');
+    //tasks
+    Route::resource('tasks',\App\Http\Controllers\Admin\TasksController::class);
 });
 
-Route::get('hello', function () {
-    return 'Hello world';
-});
+
 //Admin
 Route::group(['prefix'=>'admin'],function()
 {
 //Home
     Route::get('/',[\App\Http\Controllers\Admin\IndexController::class,'index'])->name('admin.index');
-    //tasks
+    // //tasks
     Route::resource('tasks',\App\Http\Controllers\Admin\TasksController::class);
 });

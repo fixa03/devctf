@@ -67,7 +67,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('tasks.index')}}">
               <span data-feather="file"></span>
-              Задания
+              Список заданий
             </a>
           </li>
           <li class="nav-item">

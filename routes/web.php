@@ -23,7 +23,7 @@ Route::get('/', function () {
 //Admin
 Route::group(['prefix'=>'admin'],function()
 {
-//Home
+//Home dfdfdfdfd
     Route::get('/',[\App\Http\Controllers\Admin\IndexController::class,'index'])->name('admin.index');
     // //tasks
     Route::resource('tasks',\App\Http\Controllers\Admin\TasksController::class);
